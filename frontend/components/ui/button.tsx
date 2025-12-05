@@ -36,6 +36,16 @@ const buttonVariants = cva(
   }
 )
 
+/**
+ * Renders a stylable button that can optionally render as a Radix Slot child.
+ *
+ * @param className - Additional CSS classes to apply to the button
+ * @param variant - Visual variant to apply (see `buttonVariants` for available options)
+ * @param size - Size variant to apply (see `buttonVariants` for available options)
+ * @param asChild - If true, renders a `Slot` so the consuming element becomes the actual DOM element
+ * @param props - All other props are forwarded to the rendered element
+ * @returns The rendered button element
+ */
 function Button({
   className,
   variant,
