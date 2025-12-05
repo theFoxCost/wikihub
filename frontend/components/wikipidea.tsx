@@ -18,6 +18,14 @@ import { Checkbox } from "@/components/ui/checkbox"
 
 type Schema = z.infer<typeof formSchema>;
 
+/**
+ * Render a user registration form with client-side validation and submission handling.
+ *
+ * When the form is successfully submitted it resets and displays a success confirmation UI;
+ * while submitting it shows an executing state for the submit control.
+ *
+ * @returns The JSX element that renders the form or the post-submission success confirmation.
+ */
 export default function DraftForm() {
   
   const form = useForm<Schema>({
