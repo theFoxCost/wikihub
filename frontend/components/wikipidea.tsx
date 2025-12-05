@@ -23,15 +23,14 @@ export default function DraftForm() {
   const form = useForm<Schema>({
     resolver: zodResolver(formSchema as any),
   })
-  const alldata = form.getValues()
-  console.log(alldata)
+  // const alldata = form.getValues()
+  // console.log(alldata)
   const formAction = useAction(serverAction, {
     onSuccess: () => {
-      // TODO: show success message
       form.reset();
     },
     onError: () => {
-      // TODO: show error message
+      console.log("error occured");
     },
   });
   const handleSubmit = form.handleSubmit(async (data: Schema) => {
